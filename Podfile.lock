@@ -1,0 +1,71 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AwaitKit (4.0.0):
+    - PromiseKit (~> 4.5)
+  - Cache (5.0.0)
+  - CryptoSwift (0.10.0)
+  - Hero (1.2.0)
+  - IDZSwiftCommonCrypto (0.10.0)
+  - KeychainSwift (10.0.0)
+  - OrderedDictionary (1.4)
+  - PromiseKit (4.5.2):
+    - PromiseKit/Foundation (= 4.5.2)
+    - PromiseKit/QuartzCore (= 4.5.2)
+    - PromiseKit/UIKit (= 4.5.2)
+  - PromiseKit/CorePromise (4.5.2)
+  - PromiseKit/Foundation (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.5.2):
+    - PromiseKit/CorePromise
+  - SwiftLocation (3.1.0):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftyBeaver (1.6.0)
+  - SwiftyJSON (4.0.0)
+  - SwiftyRSA (1.4.0):
+    - SwiftyRSA/ObjC (= 1.4.0)
+  - SwiftyRSA/ObjC (1.4.0)
+  - Swinject (2.1.1)
+  - SwinjectAutoregistration (2.1.1):
+    - Swinject (~> 2.1)
+  - SwinjectStoryboard (1.1.2):
+    - Swinject (~> 2.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - AwaitKit (~> 4.0.0)
+  - Cache
+  - CryptoSwift
+  - Hero
+  - IDZSwiftCommonCrypto
+  - KeychainSwift (~> 10.0)
+  - OrderedDictionary (~> 1.4)
+  - SwiftLocation (~> 3.1.0)
+  - SwiftyBeaver
+  - SwiftyRSA
+  - Swinject (= 2.1.1)
+  - SwinjectAutoregistration (= 2.1.1)
+  - SwinjectStoryboard
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AwaitKit: df0504b51c7e2c30dd47c029ac9c5fe8adf6ba49
+  Cache: fae4826ba52d7a5d9a3a0ad6fe73e3501a82964f
+  CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
+  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
+  IDZSwiftCommonCrypto: 4eef2c46e262dfbcbc1fd76365e066336680ad7d
+  KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
+  OrderedDictionary: 138c8d2e358d3a0c9adda15c6c7db24e8e3b09e6
+  PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
+  SwiftLocation: 8f5ef4f510a45e43239de57a3145b3669301e898
+  SwiftyBeaver: e45759613e50b522b0e6f53b1f0f14389b45ca34
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SwiftyRSA: 601e4585fece2c6c50ae93a67c77cc2426e55cb2
+  Swinject: afea49fd95f392b41171669f165842879c48fad6
+  SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
+  SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
+
+PODFILE CHECKSUM: e5dbb7b648bd8b841f93f030287f4aabe819be6f
+
+COCOAPODS: 1.4.0

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="Wj2-ga-I1e">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PJU-TE-xJ2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_bar_icon_home" selectedImage="tab_bar_icon_home" id="yCz-8T-IDD">
+                        <color key="badgeColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nzH-vD-9kf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="CDF-X7-1uy" kind="show" identifier="EmbedHomeViewController" id="jcQ-Wj-b1j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8z4-oS-BVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="278"/>
+        </scene>
+        <!--LoadingBarViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoadingBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="LoadingBarViewController" customClass="LoadingBarViewController" customModule="GithubBusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdk-jh-FcS" userLabel="Progress Bar">
+                                <rect key="frame" x="46" y="332" width="283" height="3"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="tintColor" red="0.043137254899999998" green="0.4823529412" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading GithubBusApp for the first time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUP-U4-QyN">
+                                <rect key="frame" x="46" y="288" width="283" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="rUk-T4-sdk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Please Wait..." id="xhQ-qr-e7b"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="progressBar" destination="fdk-jh-FcS" id="f3a-ps-Rqi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626" y="278"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="Nfk-aq-5qU">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" title="Home" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CDF-X7-1uy" userLabel="HomeViewController" customClass="HomeViewController" customModule="GithubBusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="gwy-Nf-u1O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9Y-nb-4oA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xB-pj-zfE" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" text="28th Jun 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8a-hj-iWN" userLabel="Date Label">
+                                                <rect key="frame" x="16" y="20" width="343" height="15"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.69803921570000005" alpha="0.63958154970000003" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" text="Nearby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-1p-XTV" userLabel="Nearby Label">
+                                                <rect key="frame" x="16" y="40" width="343" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2p-II-eFv" userLabel="Horizontal Bar">
+                                                <rect key="frame" x="22" y="90" width="331" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.78431372549019607" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbP-k2-xMe">
+                                                <rect key="frame" x="16" y="99" width="343" height="241"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <connections>
+                                                    <segue destination="vQU-ho-fvO" kind="embed" identifier="Embed NearbyViewController" id="cix-j6-bfc"/>
+                                                </connections>
+                                            </containerView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7xB-pj-zfE" firstAttribute="leading" secondItem="X9Y-nb-4oA" secondAttribute="leading" id="G9F-cB-Dzt"/>
+                                    <constraint firstItem="7xB-pj-zfE" firstAttribute="trailing" secondItem="X9Y-nb-4oA" secondAttribute="trailing" id="UG4-5B-KWU"/>
+                                    <constraint firstItem="7xB-pj-zfE" firstAttribute="top" secondItem="X9Y-nb-4oA" secondAttribute="top" id="bym-vc-vae"/>
+                                    <constraint firstItem="7xB-pj-zfE" firstAttribute="bottom" secondItem="X9Y-nb-4oA" secondAttribute="bottom" id="eJx-e1-WGl"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="USg-fL-uKY"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7xB-pj-zfE" firstAttribute="width" secondItem="gwy-Nf-u1O" secondAttribute="width" id="1PQ-19-tGC"/>
+                            <constraint firstItem="X9Y-nb-4oA" firstAttribute="leading" secondItem="gwy-Nf-u1O" secondAttribute="leading" id="XZV-1c-2ll"/>
+                            <constraint firstItem="X9Y-nb-4oA" firstAttribute="top" secondItem="gwy-Nf-u1O" secondAttribute="top" constant="64" id="kYk-Lm-CUU"/>
+                            <constraint firstItem="X9Y-nb-4oA" firstAttribute="trailing" secondItem="gwy-Nf-u1O" secondAttribute="trailing" id="mwS-QI-iIT"/>
+                            <constraint firstItem="7xB-pj-zfE" firstAttribute="height" secondItem="gwy-Nf-u1O" secondAttribute="height" id="uJ5-FV-UTN"/>
+                            <constraint firstItem="X9Y-nb-4oA" firstAttribute="bottom" secondItem="gwy-Nf-u1O" secondAttribute="bottom" constant="-49" id="vYj-ag-1l2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KSl-j4-W5z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_bar_icon_home" selectedImage="tab_bar_icon_home" id="dtG-vL-VQ2">
+                        <color key="badgeColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="S8a-hj-iWN" id="Pbh-Hd-8gE"/>
+                        <outlet property="scrollView" destination="X9Y-nb-4oA" id="NjL-oF-E1z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJJ-hc-Xpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303.2" y="276.61169415292358"/>
+        </scene>
+        <!--Nearby Collection View Controller-->
+        <scene sceneID="cki-75-Nb8">
+            <objects>
+                <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="GHf-CY-0K8" customClass="NearbyCollectionViewController" customModule="GithubBusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" id="Z5K-W3-faN">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewLayout key="collectionViewLayout" id="yrf-dz-jON" customClass="CollectionViewFlowLayoutCenterItem" customModule="GithubBusApp" customModuleProvider="target"/>
+                        <view key="backgroundView" contentMode="scaleToFill" id="gTa-78-0xc">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="240"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" preservesSuperviewLayoutMargins="YES" reuseIdentifier="NearbyCollectionViewCell" id="f8e-EY-a6Z" customClass="NearbyCollectionViewCell" customModule="GithubBusApp" customModuleProvider="target">
+                                <rect key="frame" x="64" y="0.0" width="215" height="240"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="215" height="240"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOg-qe-w3w" userLabel="Shadow View" customClass="DesignableView" customModule="GithubBusApp" customModuleProvider="target">
+                                            <rect key="frame" x="9" y="11" width="195" height="220"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NjX-Zv-2Z1" userLabel="Inner View" customClass="DesignableView" customModule="GithubBusApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="220"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_stop_image" translatesAutoresizingMaskIntoConstraints="NO" id="rd9-CO-6fs">
+                                                            <rect key="frame" x="0.0" y="-30" width="195" height="120"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joan Miró 110" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="NM7-5B-N5N">
+                                                            <rect key="frame" x="8" y="98" width="197" height="26"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontSizeToFitWidth" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="38" translatesAutoresizingMaskIntoConstraints="NO" id="U2v-4f-ctj">
+                                                            <rect key="frame" x="149" y="100" width="38" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" red="0.043137254901960784" green="0.4823529411764706" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="79U-02-Ubb">
+                                                            <rect key="frame" x="8" y="132" width="179" height="80"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOffset">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akO-2J-7gC" userLabel="Bus Stop Number" customClass="DesignableView" customModule="GithubBusApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bus_icon" translatesAutoresizingMaskIntoConstraints="NO" id="iuR-tY-4hb" userLabel="Bus Icon">
+                                                    <rect key="frame" x="4" y="4" width="22" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="133" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="IJr-h5-CFl" userLabel="Stop Number Label">
+                                                    <rect key="frame" x="31" y="4" width="34" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.06495288759469986" green="0.37301188707351685" blue="0.77624320983886719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCU-jc-ZQz" userLabel="Distance View" customClass="DesignableView" customModule="GithubBusApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="31" width="70" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="📍50m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-a4-K1z" userLabel="Distance Label">
+                                                    <rect key="frame" x="0.0" y="4" width="70" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="215" height="240"/>
+                                <connections>
+                                    <outlet property="addressLabel" destination="NM7-5B-N5N" id="8Be-Xz-bpe"/>
+                                    <outlet property="distanceLabel" destination="gGN-a4-K1z" id="YNw-b1-Efi"/>
+                                    <outlet property="moreLabel" destination="U2v-4f-ctj" id="Ixu-JN-1VP"/>
+                                    <outlet property="stackView" destination="79U-02-Ubb" id="uc2-Cc-SgQ"/>
+                                    <outlet property="stopNumberLabel" destination="IJr-h5-CFl" id="HVx-5m-emF"/>
+                                    <outlet property="streetviewImage" destination="rd9-CO-6fs" id="b6e-R5-Qyc"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="GHf-CY-0K8" id="fPq-kN-lCh"/>
+                            <outlet property="delegate" destination="GHf-CY-0K8" id="EP2-Bd-3PQ"/>
+                        </connections>
+                    </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <size key="freeformSize" width="343" height="240"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcq-hf-UMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3159" y="276"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wVF-OS-2Bb">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Abe-OA-h4m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gc9-6d-0FT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="PJU-TE-xJ2" kind="relationship" relationship="viewControllers" id="C3v-rN-hEs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9W-d6-8Ap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-569" y="278"/>
+        </scene>
+        <!--Nearby View Controller-->
+        <scene sceneID="WWX-1H-P5i">
+            <objects>
+                <viewController storyboardIdentifier="NearbyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vQU-ho-fvO" customClass="NearbyViewController" customModule="GithubBusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="me7-B7-18H">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="241"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7Y-CA-hfd">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="241"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="GHf-CY-0K8" kind="embed" identifier="EmbedNearbyCollectionViewController" id="iL5-rP-Mfq"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="53H-Bj-kvr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxi-VJ-qFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2247" y="278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bus_icon" width="128" height="128"/>
+        <image name="default_stop_image" width="1270" height="798"/>
+        <image name="tab_bar_icon_home" width="30" height="30"/>
+    </resources>
+</document>

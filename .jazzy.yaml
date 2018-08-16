@@ -1,0 +1,19 @@
+module: GithubBusApp
+author: James Mallison
+author_url: j7mbo.com
+swift_version: 4.1.2
+
+copyright: "© 2018 [J7mbo](http://j7mbo.com)"
+
+output: GithubBusApp/Supporting Files/Docs/
+
+xcodebuild_arguments:
+ -  '-verbose'
+ -  '-workspace'
+ - 'GithubBusApp.xcworkspace'
+ -  '-scheme'
+ - 'GithubBusApp'
+
+min_acl: private
+
+exclude: ["**/AppDelegate.swift", "**/*Entity.swift", "**/*ContainerConfiguration.swift", "**/*Alamofire**", "**/*Extensions.swift"]
